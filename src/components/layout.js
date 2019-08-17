@@ -1,16 +1,35 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
+import styled from 'styled-components'
+import GroupOfTriangles from './GroupOfTriangles'
 
 import Header from "./header"
 import "./layout.css"
+
+const TrianglesContainer1 = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+`
+
+const TrianglesContainer2 = styled.div`
+  position: absolute;
+  right: 0;
+  top: 17%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+`
+
+// const LayoutStyle = styled.div`
+// display: flex;
+// flex-direction: column;
+// `
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,16 +41,21 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  let parallax;
   return (
-    <>
-      <div>
+    // <LayoutStyle>
+      <Parallax pages={5} ref={ref => parallax = ref}>
+        <TrianglesContainer1>
+          <GroupOfTriangles/>
+        </TrianglesContainer1>
+        <TrianglesContainer2>
+          <GroupOfTriangles/>
+        </TrianglesContainer2>
+
         <main>{children}</main>
-        <footer>
-          sdvlsdjkbvdsv
-        </footer>
-      </div>
-    </>
+
+      </Parallax>
+      // </LayoutStyle>
   )
 }
 

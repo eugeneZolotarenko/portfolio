@@ -8,6 +8,27 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  color: #05324F;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+.TriangleBig{
+  width: 5.1%;;
+  height: 5.1%;
+}
+.TriangleMid{
+  width: 3.6%;;
+  height: 3.6%;
+}
+.TriangleSmall{
+  width: 2.2%;;
+  height: 2.2%;
+}
 /* 
 article,
 aside,
