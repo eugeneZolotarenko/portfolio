@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 import styled from 'styled-components'
 import GroupOfTriangles from './GroupOfTriangles'
+import Nav from "./Nav"
 
 import Header from "./header"
 import "./layout.css"
@@ -43,7 +44,8 @@ const Layout = ({ children }) => {
   `)
   let parallax;
   return (
-    // <LayoutStyle>
+    <>
+      <Nav/>
       <Parallax pages={5} ref={ref => parallax = ref}>
         <TrianglesContainer1>
           <GroupOfTriangles/>
@@ -55,7 +57,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
 
       </Parallax>
-      // </LayoutStyle>
+    </>
   )
 }
 
