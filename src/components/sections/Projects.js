@@ -23,7 +23,8 @@ const ProjectsStyle = styled.section`
 export default class Projects extends Component {
     render() {
         return (
-            <ParallaxLayer offset={1.5} speed={0.7}>
+            <>
+            <ParallaxLayer className="ProjectsHeightL" offset={1} speed={0.7}>
                <ProjectsStyle>
                    <div className="BlueWave"/>
                    <h3>projects</h3>
@@ -33,6 +34,17 @@ export default class Projects extends Component {
                    <div></div>
                 </ProjectsStyle>    
             </ParallaxLayer>
+            <ParallaxLayer className="ProjectsHeightS" offset={2} speed={0.7}>
+                <ProjectsStyle>
+                    <div className="BlueWave"/>
+                    <h3>projects</h3>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </ProjectsStyle>    
+            </ParallaxLayer>
+            </>
         )
     }
 }

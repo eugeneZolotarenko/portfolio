@@ -8,7 +8,7 @@ export default class StracturePage extends Component {
     render() {
         let parallax;
         return (
-            <ParallaxLayer offset={0} speed={0.6}>
+            <ParallaxLayer offset={0} speed={0.4}>
               <IntroStyle>
                 <div className="GuyName">
                   <Guy/>
