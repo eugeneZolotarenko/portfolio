@@ -27,6 +27,24 @@ const TrianglesContainer2 = styled.div`
   z-index: 0;
 `
 
+const TrianglesContainer3 = styled.div`
+  position: absolute;
+  right: 0;
+  top: 34%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+`
+
+const TrianglesContainer4 = styled.div`
+  position: absolute;
+  right: 0;
+  top: 51%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+`
+
 // const LayoutStyle = styled.div`
 // display: flex;
 // flex-direction: column;
@@ -53,9 +71,15 @@ const Layout = ({ children }) => {
         <TrianglesContainer2>
           <GroupOfTriangles/>
         </TrianglesContainer2>
-
-        <main>{children}</main>
-
+        <TrianglesContainer3>
+          <GroupOfTriangles/>
+        </TrianglesContainer3>
+        <TrianglesContainer4>
+          <GroupOfTriangles/>
+        </TrianglesContainer4>
+        <ParallaxLayer offset={0} speed={0.4}>
+          <main>{children}</main>
+        </ParallaxLayer>
       </Parallax>
     </>
   )

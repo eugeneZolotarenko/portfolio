@@ -1,8 +1,20 @@
+/* @font-face {
+	font-family: DS Brushes;
+	src: url("../fonts/DSBrushs.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+  } */
 html {
   font-family: 'Montserrat', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 10px;
+}
+@font-face {
+  font-family: "DS Brushes";
+  src: url("../fonts/ds_brushes.ttf");
+  font-weight: normal;
+	font-style: normal;
 }
 body {
   margin: 0;
@@ -13,6 +25,9 @@ body {
   color: #05324F;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
+}
+.KazkaPreview{
+  font-family: "DS Brushes";
 }
 h1, h2, h3, h4, h5, ul, ol {
   margin: 0;
