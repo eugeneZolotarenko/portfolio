@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Meta from "../components/Meta"
 import Intro from "../components/sections/Intro"
 import Projects from "../components/sections/Projects"
+import Skills from "../components/sections/Skills"
 
 const theme = {
   blue: "#05324F",
@@ -22,6 +23,7 @@ const IndexPage = () => (
     <Meta/>
     <Intro/>
     <Projects/>
+    <Skills/>
   </Layout>
   </ThemeProvider>
 )

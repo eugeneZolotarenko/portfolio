@@ -9,9 +9,9 @@ const IntroStyle = styled.section`
    background-image: url(${MainSpotXL});
    background-repeat: no-repeat;
    background-size: contain; 
-   margin-top: -1%;
+   margin-top: -2%;
    margin-left: -0.3%;
-   width: 85vw;
+   width: 93vw;
    height: 150vh;
    z-index: 100;
    padding-top: 5%;
@@ -109,6 +109,7 @@ const IntroStyle = styled.section`
     min-width: 680px;
     height: 1000px;
     padding-top: 30%;
+    margin-top: -3%;
     .GuyName{
       .gatsby-image-wrapper{
         height: 50%;
