@@ -4,22 +4,37 @@
 	font-weight: normal;
 	font-style: normal;
   } */
+/* @font-face {
+  font-family: "DS Brushes";
+  src: url("../fonts/ds_brushes.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   font-family: 'Montserrat', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 10px;
-}
-@font-face {
-  font-family: "DS Brushes";
-  src: url("../fonts/ds_brushes.ttf");
-  font-weight: normal;
-	font-style: normal;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+.navbar-hidden {
+  transform: translateY(-80px);
+  color: white;
+}
+.nav-top {
+    background: transparent;
+}
+.nav-top .logo{
+    display: none;
+}
+.nav-top ul li button {
+    color: #05324F;
 }
 * {
   color: #05324F;
@@ -29,23 +44,37 @@ body {
 .KazkaPreview{
   font-family: "DS Brushes";
 }
+#gatsby-focus-wrapper{
+  position: relative;
+}
 h1, h2, h3, h4, h5, ul, ol {
   margin: 0;
   padding: 0;
-}
-.TriangleBig{
-  width: 5.1%;;
-  height: 5.1%;
-}
-.TriangleMid{
-  width: 3.6%;;
-  height: 3.6%;
-}
-.TriangleSmall{
-  width: 2.2%;;
-  height: 2.2%;
-}
-  @media (min-width: 1001px), (max-aspect-ratio: 1/1){
+} */
+/* .cursor{
+  width: 20px;
+  height: 20px;
+  border: 1px solid #05324F;
+  border-radius: 50%;
+  z-index: 2000;
+  position: absolute;
+} */
+/* main{
+  max-height: 4800px;
+} */
+/* .container-triangles{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: right;
+  justify-content: flex-end;
+  z-index: 1000;
+} */
+
+  /* @media (min-width: 1001px), (max-aspect-ratio: 1/1){
     .ProjectsHeightS{
       display: none;
   }
@@ -54,7 +83,7 @@ h1, h2, h3, h4, h5, ul, ol {
     .ProjectsHeightL{
       display: none;
   }
-}
+} */
 /* 
 article,
 aside,

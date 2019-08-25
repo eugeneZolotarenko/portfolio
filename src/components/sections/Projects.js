@@ -8,8 +8,14 @@ import StoreWheelsLogo from "../../images/ProjectsPreviews/StoreWheelsLogo.svg"
 import PortfolioPreview from "../../images/ProjectsPreviews/PortfolioPreview.svg"
 
 const ProjectsStyle = styled.section`
+@font-face {
+  font-family: "DS Brushes";
+  src: url("../fonts/ds_brushes.ttf");
+  font-weight: normal;
+  font-style: normal;
+  }
   margin-top: 87px;
-  background: linear-gradient(180deg, #05314E 0%, #DF2A61 100%);
+  background: linear-gradient(180deg, #05324F 0%, #DF2A61 100%);
   width: 100%;
   position: relative;
   padding: 1.5% 5%;
@@ -49,6 +55,7 @@ const ProjectsStyle = styled.section`
             background-image: url(${KazkaPreview});
             color: white;
             font-size: 19rem;
+            font-family: "DS Brushes";
             @media screen and (max-width: 800px){
                 font-size: 11rem;
             }
@@ -107,8 +114,8 @@ export default class Projects extends Component {
                    <h3>projects</h3>
                    <div className="ProjectsContainer">
                    <button className="StoreWheelsPreview"><img src={StoreWheelsLogo}/></button>
-                     <button className="KazkaPreview">KAZKA</button>
-                     <button className="PortfolioPreview">Eugene<br/>Zolotarenko</button>
+                   <button className="KazkaPreview">KAZKA</button>
+                    <button className="PortfolioPreview">Eugene<br/>Zolotarenko</button>
                    </div>
                    <div className="TriangleRed"/>
                 </ProjectsStyle>    

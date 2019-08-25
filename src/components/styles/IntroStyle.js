@@ -17,6 +17,8 @@ const IntroStyle = styled.section`
    padding-top: 5%;
    min-width: 1360px;
    min-height: 1629px;
+   z-index: 100;
+   position: relative;
    .GuyName{
     display: flex;
     align-items: center;
@@ -41,6 +43,7 @@ const IntroStyle = styled.section`
     line-height: 60px;
     padding-left: 5%;
     padding-top: 7%;
+    width: fit-content;
     .mobile{
       display: none;
     }
