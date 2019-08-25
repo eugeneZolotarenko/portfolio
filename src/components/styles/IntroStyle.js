@@ -143,10 +143,12 @@ const IntroStyle = styled.section`
       .gatsby-image-wrapper{
         height: 40%;
         width: 40%;
+        margin-top: 6%;
+        margin-left: 2%
       } 
       h1{
         margin-left: 3%;
-        margin-top: 5%;
+        margin-top: 0;
       }
     }
     .IntroWords{
@@ -187,13 +189,17 @@ const IntroStyle = styled.section`
     padding-top: 4%;
     .GuyName{
       padding-left: 0;
+      .gatsby-image-wrapper{
+        margin-left: 0;
+      } 
       h1{
         padding-left: 1%;
         margin-top: 0;
+        font-size: 3.6rem;
       }
     }
     .IntroWords{
-      padding-top: 19%;
+      padding-top: 13%;
       font-size: 1.5rem;
       line-height: 20px;
       padding-left: 1%;

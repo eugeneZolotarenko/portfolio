@@ -11,6 +11,7 @@ class Meta extends React.Component {
       href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,800"
       rel="stylesheet"
         />
+        <link href="hamburgers.min.css" rel="stylesheet"/>
     <title>Eugene Zolotarenko</title>
         </Helmet>
       </div>

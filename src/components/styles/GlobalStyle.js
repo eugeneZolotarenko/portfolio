@@ -19,6 +19,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }
+/* Navigation */
 .navbar-hidden {
   transform: translateY(-80px);
   color: white;
@@ -32,15 +33,29 @@ body {
 .nav-top {
   ul{
     li{
+      @media screen and (min-width: 681px){
       a{
         color: ${props => props.theme.blue} !important;
       }
-      .active{
-          color: ${props => props.theme.red} !important;
+    }
+    }
+  }
+  .hamburger{
+    .hamburger-box{
+          .hamburger-inner{
+            &::before, &::after{
+              background-color: ${props => props.theme.blue}!important;
+            }
+          }
         }
+    span{
+      span, &::before, &::after{
+        background-color: ${props => props.theme.blue}!important;
+      }
     }
   }
 }
+/* End Navigation */
 #gatsby-focus-wrapper{
   position: relative;
 }
