@@ -45,11 +45,21 @@ const ProjectsStyle = styled.section`
         z-index: 200;
         button{
         height: 35vh;
+        min-height: 300px;
         border: none;
         border-radius: 10px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: center;
+        transition: 0.3s;
+        outline: none;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0px 0px 15px 0px rgba(255,255,255,0.8);
+        }
+        &:focus{
+            box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
+        }
         }
         .KazkaPreview{
             background-image: url(${KazkaPreview});

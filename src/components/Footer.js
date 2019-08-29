@@ -11,6 +11,7 @@ const FooterStyle = styled.section`
     }
   p{
       font-size: 3rem;
+      width: 80%;
       @media screen and (max-width: 500px){
         font-size: 2rem;
        }

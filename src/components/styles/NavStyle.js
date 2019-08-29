@@ -12,7 +12,7 @@ const Navigation = styled.nav`
   left: 0;
   width: 100%;
   padding: 0 5%;
-  transition: background-color 0.95s, transform 0.8s;
+  transition: background-color 0.5s, transform 0.6s;
   border-bottom-left-radius: ${props => props.theme.smallRadius};
   border-bottom-right-radius: ${props => props.theme.smallRadius};
   ul{
