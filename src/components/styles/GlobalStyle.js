@@ -13,11 +13,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  height: 100%;
 }
 * {
   color: #05324F;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
+}
+.noscroll { 
+  overflow: hidden;
+}
+#gatsby-focus-wrapper{
+  position: relative;
+}
+h1, h2, h3, h4, h5, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+main{
+  height: 100%;
+  overflow: auto;
 }
 /* Navigation */
 .navbar-hidden {
@@ -56,13 +71,6 @@ body {
   }
 }
 /* End Navigation */
-#gatsby-focus-wrapper{
-  position: relative;
-}
-h1, h2, h3, h4, h5, ul, ol {
-  margin: 0;
-  padding: 0;
-}
 `;
 
 export default GlobalStyle;
