@@ -6,6 +6,19 @@ import KazkaPreview from "../../images/ProjectsPreviews/KazkaPreview.svg"
 import StoreWheelsPreview from "../../images/ProjectsPreviews/StoreWheelsPreview.svg"
 import StoreWheelsLogo from "../../images/ProjectsPreviews/StoreWheelsLogo.svg"
 import PortfolioPreview from "../../images/ProjectsPreviews/PortfolioPreview.svg"
+import Image from "../../images/image.jpg"
+import GroupOfTriangles from '../GroupOfTriangles'
+
+import liveBtn from "../../images/ProjectBtns/liveBtn.svg"
+import closeBtn from "../../images/ProjectBtns/closeBtn.svg"
+import codeBtn from "../../images/ProjectBtns/codeBtn.svg"
+import HoverUpBtn from "../../images/ProjectBtns/HoverUpBtn.svg"
+import HoverRightBtn from "../../images/ProjectBtns/HoverRightBtn.svg"
+
+
+
+import AwesomeSlider from 'react-awesome-slider';
+import AwsSliderStyles from 'react-awesome-slider/src/core/styles.scss';
 
 const ProjectsStyle = styled.section`
 @font-face {
@@ -113,34 +126,183 @@ const ProjectsStyle = styled.section`
             font-size: 4rem;
         }
     }
-    /* .storeWheels-popup, .kazka-popup, .portfolio-popup{
-        transition: 0.8s;
-    } */
+    .popup-open{
+        transform: translateY(0);
+    }
     .popup{
         position: fixed;
-    }
-    .popup-open{
-        transition: 0.4s;
         background-color: white;
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
         z-index: 9000;
-        font-size: 19rem;
         display: flex;
         align-items: center;
-        transform: translateY(0);
-        div{
+        transition: 0.8s ease-in-out;
+        .project-wrapper{
+            padding: 1% 2%;
             height: 100%;
+            width: 100%;
             overflow-y: auto;
-            p{
-                margin:0;
+            display: flex;
+            z-index: 300;
+            .kUOAvI{
+                right: 2%;
+            }
+            &::before{
+                content: "";
+                width: 99%;
+                height: 100%;
+                background: linear-gradient(90deg, #FEFEFE 84.9%, rgba(254, 254, 254, 0.16) 100%);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 99;
+                @media screen and (max-width: 500px){
+                    background: linear-gradient(90deg, #FEFEFE 91%, rgba(254, 254, 254, 0.16) 100%);
+                }
+            }
+            .project-content{
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 2.5rem;
+                z-index: 900;
+                .project-slider-btns{
+                    display: flex;
+                    justify-content: space-around;
+                    width: 80%;
+                    @media screen and (max-width: 1100px){
+                        width: 100%;
+                    }
+                    @media screen and (max-width: 650px){
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                    }
+                    .slider{
+                      height: 60%;
+                      width: 60%;
+                      border-radius: 10px;
+                      @media screen and (max-width: 1400px){
+                        width: 70%;
+                      }
+                      @media screen and (max-width: 1100px){
+                        width: 80%;
+                      }
+                      @media screen and (max-width: 500px){
+                        width: 100%;
+                      }
+                    }
+                    .project-btns{
+                        justify-self: flex-start;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding-bottom: 5%;
+                        @media screen and (max-width: 650px){
+                           flex-direction: row;
+                           width: 80%;
+                           padding-bottom: 7%;
+                        }
+                        div{
+                        display: flex;
+                        flex-direction: column;
+                        justify-self: center;
+                        @media screen and (max-width: 650px){
+                           flex-direction: row;
+                        }
+                        }
+                        a, button{
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            font-size: 2.5rem;
+                            padding: 0;
+                            width: 72px;
+                            height: 72px;
+                            border: none;
+                            transition: .3s;
+                            display: block;
+                            text-decoration: none;
+                            span{
+                                display: block;
+                                margin-top: 72px;
+                                transition: .3s;
+                                font-weight: 600;
+                                text-align: center;
+                            }
+                            @media screen and (max-width: 1100px){
+                                transform: scale(0.8)
+                            }
+                            @media screen and (max-width: 500px){
+                                transform: scale(0.6)
+                            }
+                        }
+                        .close{
+                            background-image: url(${closeBtn});
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                            justify-self: flex-start;
+                            &:hover{
+                               background-image: url(${HoverUpBtn});
+                               span{
+                                   color: ${props => props.theme.green};
+                               }
+                            }
+                        }
+                        .live{
+                            background-image: url(${liveBtn});
+                            justify-self: flex-end;
+                            span{
+                                color: ${props => props.theme.red};
+                            }
+                        }
+                        .code{
+                            background-image: url(${codeBtn});
+                            justify-self: flex-end;
+                            span{
+                                color: ${props => props.theme.orange};
+                            }
+                        }
+                        .live, .code {
+                            margin-top: 50px;
+                            &:hover{
+                               background-image: url(${HoverRightBtn});
+                               span{
+                                   color: ${props => props.theme.green};
+                               }
+                            }
+                            @media screen and (max-width: 650px){
+                                margin-top: 0;
+                            }
+                        }
+                    }
+              }
+              p{
+                font-size: 2.7rem;
+                width: 85%;
+                align-self: flex-start;
+                &:first-of-type{
+                    margin-top: 120px;
+                }
+                @media screen and (max-width: 650px){
+                    /* margin-top: 50px; */
+                    width: 95%;
+                    font-size: 2rem;
+                    &:first-of-type{
+                       margin-top: 60px;
+                    }
+                  }
+                }
             }
         }
     }
     .popup-close{
-        transform: translateY(-150%);
+        transform: translateY(-350%);
     }
 `
 
@@ -161,19 +323,19 @@ export default class Projects extends Component {
         this.setState({
           openPopup1: !this.state.openPopup1
         });
-        setTimeout(function(){ document.documentElement.classList.toggle('noscroll'); }, 200)
+        setTimeout(function(){ document.documentElement.classList.toggle('noscroll'); }, 400)
     }
     toOpenPopup2() {
         this.setState({
           openPopup2: !this.state.openPopup2
         });
-        setTimeout(function(){ document.documentElement.classList.toggle('noscroll'); }, 200)
+        setTimeout(function(){ document.documentElement.classList.toggle('noscroll'); }, 400)
     }
     toOpenPopup3() {
         this.setState({
           openPopup3: !this.state.openPopup3
         });
-        setTimeout(function(){ document.documentElement.classList.toggle('noscroll'); }, 200)
+        setTimeout(function(){ document.documentElement.classList.toggle('noscroll'); }, 400)
     }
     render() {
         return (
@@ -185,9 +347,78 @@ export default class Projects extends Component {
                      <button onClick={this.toOpenPopup2} className="kazka-preview">KAZKA</button>
                      <button onClick={this.toOpenPopup3} className="portfolio-preview">Eugene<br/>Zolotarenko</button>
                    </div>
-                   <div className={this.state.openPopup1 ? "popup popup-open storeWheels-popup" : "popup popup-close storeWheels-popup"}></div>
-                   <div className={this.state.openPopup2 ? "popup popup-open kazka-popup" : "popup popup-close kazka-popup"}></div>
-                   <div className={this.state.openPopup3 ? "popup popup-open portfolio-popup" : "popup popup-close portfolio-popup"}><div><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p><p>fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf fdfshgfjh gkjfhlkg; jkhjghf gdfs daszf</p></div></div>                   
+                   <div className={this.state.openPopup1 ? "popup popup-open storeWheels-popup" : "popup popup-close storeWheels-popup"}>
+                   <div className="project-wrapper">
+                          <GroupOfTriangles/>
+                          <div className="project-content">
+                              <div className="project-slider-btns">
+                                <div className="project-btns">
+                                    <button onClick={this.toOpenPopup1} className="close" href=""><span>close</span></button>
+                                    <div>
+                                       <a className="live" href="https://bnvk-kazka.com/" target="_blank"><span>live</span></a>
+                                       <a className="code" href="https://github.com/eugeneZolotarenko/Kazka" target="_blank"><span>code</span></a>
+                                    </div>
+                                </div>
+                                    <AwesomeSlider className="slider" cssModule={AwsSliderStyles}>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                    </AwesomeSlider>
+                                </div>
+                           <p>I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do.I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer.</p>
+                           <p>I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do.I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer.</p>
+                          </div>
+                       </div>
+                   </div>
+                   <div className={this.state.openPopup2 ? "popup popup-open kazka-popup" : "popup popup-close kazka-popup"}>
+                       <div className="project-wrapper">
+                          <GroupOfTriangles/>
+                          <div className="project-content">
+                              <div className="project-slider-btns">
+                                <div className="project-btns">
+                                    <button onClick={this.toOpenPopup2} className="close" href=""><span>close</span></button>
+                                    <div>
+                                       <a className="live" href="https://bnvk-kazka.com/" target="_blank"><span>live</span></a>
+                                       <a className="code" href="https://github.com/eugeneZolotarenko/Kazka" target="_blank"><span>code</span></a>
+                                    </div>
+                                </div>
+                                    <AwesomeSlider className="slider" cssModule={AwsSliderStyles}>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                    </AwesomeSlider>
+                                </div>
+                           <p>I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do.I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer.</p>
+                           <p>I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do.I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer.</p>
+                          </div>
+                       </div>
+                   </div>
+                   <div className={this.state.openPopup3 ? "popup popup-open portfolio-popup" : "popup popup-close portfolio-popup"}>
+                   <div className="project-wrapper">
+                          <GroupOfTriangles/>
+                          <div className="project-content">
+                              <div className="project-slider-btns">
+                                <div className="project-btns">
+                                    <button onClick={this.toOpenPopup3} className="close" href=""><span>close</span></button>
+                                    <div>
+                                       <a className="live" href="https://bnvk-kazka.com/" target="_blank"><span>live</span></a>
+                                       <a className="code" href="https://github.com/eugeneZolotarenko/Kazka" target="_blank"><span>code</span></a>
+                                    </div>
+                                </div>
+                                    <AwesomeSlider className="slider" cssModule={AwsSliderStyles}>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                       <div data-src={Image}/>
+                                    </AwesomeSlider>
+                                </div>
+                           <p>I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do.I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer.</p>
+                           <p>I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do.I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer. I design and code beautifully simple things, and I love what I do. I'm passionate Front-end Developer & Designer.</p>
+                          </div>
+                       </div>
+                    </div>                   
                    <div className="triangle-red"/>
                 </ProjectsStyle>    
         )
