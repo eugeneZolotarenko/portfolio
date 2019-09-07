@@ -1,6 +1,6 @@
 # ![alt text](https://i.imgur.com/WWdKWMQ.png)
 
-<h1 align="center">
+<h1 align="left">
   Portfolio
 </h1>
 
