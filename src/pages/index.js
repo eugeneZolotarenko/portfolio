@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import Layout from "../components/layout"
 import Meta from "../components/Meta"
 import Intro from "../components/sections/Intro"
@@ -9,7 +9,7 @@ import Contact from "../components/sections/Contact";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import GroupOfTriangles from '../components/GroupOfTriangles'
-import { Link, Element, animateScroll as scroll } from "react-scroll";
+import { Element, animateScroll as scroll } from "react-scroll";
 
 const theme = {
   blue: "#05324F",

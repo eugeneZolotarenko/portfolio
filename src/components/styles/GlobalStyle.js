@@ -6,13 +6,15 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 10px;
+  overflow-y: auto;
   overflow-x: hidden;
+  transition: overflow 0.3s;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-y: hidden;
   height: 100%;
 }
 * {
@@ -22,6 +24,10 @@ body {
 }
 .noscroll { 
   overflow: hidden;
+  /* animation: 3s delay-overflow; */
+}
+@keyframes delay-overflow {
+  from { overflow: auto; }
 }
 #gatsby-focus-wrapper{
   position: relative;

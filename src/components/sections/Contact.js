@@ -165,9 +165,9 @@ export default class contact extends Component {
                 </form>
                 <h5>or find me on</h5>
                 <div className="social">
-                  <a target="_blank" href="https://github.com/eugeneZolotarenko">GitHub</a>
-                  <a target="_blank" href="https://www.linkedin.com/in/eugene-zolotarenko-b71258192/">LinkedIn</a>
-                  <a target="_blank" href="https://www.facebook.com/profile.php?id=100014069172679">Facebook</a>
+                  <a target="_blank" href="https://github.com/eugeneZolotarenko" rel="noopener noreferrer">GitHub</a>
+                  <a target="_blank" href="https://www.linkedin.com/in/eugene-zolotarenko-b71258192/" rel="noopener noreferrer">LinkedIn</a>
+                  <a target="_blank" href="https://www.facebook.com/profile.php?id=100014069172679" rel="noopener noreferrer">Facebook</a>
                 </div>
                 <div className="OrangeWave"/>
             </ContactStyle>

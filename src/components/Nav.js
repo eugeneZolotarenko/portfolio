@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
 import classnames from "classnames";
-import { Link, Element, animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Navigation from "./styles/NavStyle"
 
 export default class Nav extends Component {
