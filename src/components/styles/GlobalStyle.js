@@ -14,7 +14,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-y: hidden;
   height: 100%;
 }
 * {
@@ -24,7 +23,6 @@ body {
 }
 .noscroll { 
   overflow: hidden;
-  /* animation: 3s delay-overflow; */
 }
 @keyframes delay-overflow {
   from { overflow: auto; }
@@ -38,7 +36,8 @@ h1, h2, h3, h4, h5, ul, ol {
 }
 main{
   height: 100%;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 /* Navigation */
 .navbar-hidden {
@@ -56,7 +55,7 @@ main{
     li{
       @media screen and (min-width: 681px){
       a{
-        color: ${props => props.theme.blue} !important;
+        color: #05324F !important;
       }
     }
     }
@@ -65,13 +64,13 @@ main{
     .hamburger-box{
           .hamburger-inner{
             &::before, &::after{
-              background-color: ${props => props.theme.blue}!important;
+              background-color: #05324F!important;
             }
           }
         }
     span{
       span, &::before, &::after{
-        background-color: ${props => props.theme.blue}!important;
+        background-color: #05324F !important;
       }
     }
   }

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 import BlueWave from "../../images/BlueWave.svg"
 import TriangleRed from "../../images/TriangleRed.svg"
 import KazkaPreview from "../../images/ProjectsPreviews/KazkaPreview.svg"
@@ -109,7 +108,7 @@ const ProjectsStyle = styled.section`
       left: 0;
       z-index: 100;
     }
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 1500px){
         h3{
             font-size: 4rem;
         }
@@ -156,13 +155,12 @@ const ProjectsStyle = styled.section`
                 height: fit-content;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 font-size: 2.5rem;
                 z-index: 900;
                 .project-slider-btns{
                     display: flex;
-                    justify-content: space-around;
-                    width: 80%;
+                    justify-content: space-between;
+                    width: 90%;
                     @media screen and (max-width: 1100px){
                         width: 100%;
                     }
@@ -171,37 +169,23 @@ const ProjectsStyle = styled.section`
                         align-items: center;
                         width: 100%;
                     }
-                    .slider{
-                      height: 60%;
-                      width: 60%;
-                      border-radius: 10px;
-                      @media screen and (max-width: 1400px){
-                        width: 70%;
-                      }
-                      @media screen and (max-width: 1100px){
-                        width: 80%;
-                      }
-                      @media screen and (max-width: 500px){
-                        width: 100%;
-                      }
-                    }
                     .project-btns{
+                        width: 100%;
                         justify-self: flex-start;
                         display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
+                        justify-content: space-around;
                         padding-bottom: 5%;
+                        padding-top: 1%;
                         @media screen and (max-width: 650px){
-                           flex-direction: row;
-                           width: 80%;
                            padding-bottom: 7%;
                         }
                         div{
                         display: flex;
-                        flex-direction: column;
-                        justify-self: center;
+                        width: 20%;
+                        min-width: 60px;
+                        justify-content: space-between;
                         @media screen and (max-width: 650px){
-                           flex-direction: row;
+                            width: fit-content;
                         }
                         }
                         a, button{
@@ -225,9 +209,9 @@ const ProjectsStyle = styled.section`
                             @media screen and (max-width: 1100px){
                                 transform: scale(0.8)
                             }
-                            @media screen and (max-width: 500px){
-                                transform: scale(0.6)
-                            }
+                        }
+                        @media screen and (max-width: 1400px){
+                           font-size: 2.2rem;
                         }
                         .close{
                             background-image: url(${closeBtn});
@@ -257,7 +241,6 @@ const ProjectsStyle = styled.section`
                             }
                         }
                         .live, .code {
-                            margin-top: 50px;
                             &:hover{
                                background-image: url(${HoverRightBtn});
                                span{
@@ -283,23 +266,18 @@ const ProjectsStyle = styled.section`
                       }
                       img{
                           margin-left: 10px;
-                        @media screen and (max-width: 650px){
-                          transform: scale(0.7);
-                        }
                       }
                     }
-                  }
-              }
-              .about{
-                margin-top: 120px;
-                @media screen and (max-width: 650px){
-                    margin-top: 60px;
                   }
               }
               p, h4, h5{
                 font-size: 2.7rem;
                 width: 90%;
                 align-self: flex-start;
+                @media screen and (max-width: 1400px){
+                    width: 95%;
+                    font-size: 2.2rem;
+                  }
                 @media screen and (max-width: 650px){
                     width: 95%;
                     font-size: 2rem;

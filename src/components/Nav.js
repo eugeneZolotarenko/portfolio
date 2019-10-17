@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import classnames from "classnames";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Navigation from "./styles/NavStyle"
+import { window } from 'browser-monads';
 
 export default class Nav extends Component {
     constructor(props) {

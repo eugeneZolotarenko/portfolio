@@ -1,29 +1,10 @@
 import React, { Component } from 'react'
-import AwesomeSlider from 'react-awesome-slider'
 import ProjectsStyle from '../styles/ProjectsStyle'
-import AwsSliderStyles from 'react-awesome-slider/src/core/styles.scss'
 import SkillsStyle from '../styles/SkillsStyle'
 import GroupOfTriangles from '../GroupOfTriangles'
 
 import StoreWheelsLogo from "../../images/ProjectsPreviews/StoreWheelsLogo.svg"
 import KazkaLogo from "../../images/ProjectsPreviews/KazkaLogo.svg"
-
-import kazkaScreen1 from "../../images/ProjectsScreens/kazkaScreen1.png"
-import kazkaScreen2 from "../../images/ProjectsScreens/kazkaScreen2.png"
-import kazkaScreen3 from "../../images/ProjectsScreens/kazkaScreen3.png"
-import kazkaScreen4 from "../../images/ProjectsScreens/kazkaScreen4.png"
-import kazkaScreen5 from "../../images/ProjectsScreens/kazkaScreen5.png"
-
-import StoreWheelsScreen1 from "../../images/ProjectsScreens/StoreWheelsScreen1.png"
-import StoreWheelsScreen2 from "../../images/ProjectsScreens/StoreWheelsScreen2.png"
-import StoreWheelsScreen3 from "../../images/ProjectsScreens/StoreWheelsScreen3.png"
-import StoreWheelsScreen4 from "../../images/ProjectsScreens/StoreWheelsScreen4.png"
-import StoreWheelsScreen5 from "../../images/ProjectsScreens/StoreWheelsScreen5.png"
-import StoreWheelsScreen6 from "../../images/ProjectsScreens/StoreWheelsScreen6.png"
-
-import portfolioScreen1 from "../../images/ProjectsScreens/portfolioScreen1.png"
-import portfolioScreen2 from "../../images/ProjectsScreens/portfolioScreen2.png"
-import portfolioScreen3 from "../../images/ProjectsScreens/portfolioScreen3.png"
 
 import html5 from "../../images/Skills/html5.svg"
 import css3 from "../../images/Skills/css3.svg"
@@ -52,9 +33,6 @@ import apollo from "../../images/Skills/apollo.svg"
 import prisma from "../../images/Skills/prisma.svg"
 import GraphqlYoga from "../../images/Skills/Graphql-yoga.svg"
 
-const windowGlobal = typeof window !== 'undefined' && window
-
-windowGlobal.AwesomeSlider
 
 export default class Projects extends Component {
     constructor(props) {
@@ -108,17 +86,8 @@ export default class Projects extends Component {
                                        <a className="code" href="https://github.com/eugeneZolotarenko/Store-Wheels" target="_blank" rel="noopener noreferrer"><span>code</span></a>
                                     </div>
                                 </div>
-                                {typeof window !== "undefined" && (<AwesomeSlider className="slider" cssModule={AwsSliderStyles}>
-                                       <div data-src={StoreWheelsScreen1}/>
-                                       <div data-src={StoreWheelsScreen2}/>
-                                       <div data-src={StoreWheelsScreen3}/>
-                                       <div data-src={StoreWheelsScreen4}/>
-                                       <div data-src={StoreWheelsScreen5}/>
-                                       <div data-src={StoreWheelsScreen6}/>
-                                    </AwesomeSlider>
-                                    )}
                                 </div>
-                                <p className="about">This project opened for me the new world of web technologies with fancy interfaces and custom server side logics.<br/><br/>It is full stack online wheels store created with real credit checkout. Users can search, sell, add to cart and checkout their favourite items.<br/><br/>The application has five main models — Users, Items, Orders, CartItems, and OrderItems — all of which are relational. The app also includes many server side bits including JWT authentication, permissions, sending email, uploading images, and charging credit cards.</p>
+                                <p className="about">This project introduced me to the world of web technologies with fancy interfaces and custom server side logics.<br/><br/>It is full stack online wheels store created with real credit checkout. Users can search, sell, add to cart and checkout their favourite items.<br/><br/>The application has five main models — Users, Items, Orders, CartItems, and OrderItems — all of which are relational.<br/><br/>The app also includes many server side bits including JWT authentication, permissions, sending email, uploading images, and charging credit cards.</p>
                                 <h4>To create this project I used: </h4>
                                 <h5>click on logo to read more...</h5>
                                 <SkillsStyle>
@@ -150,14 +119,6 @@ export default class Projects extends Component {
                                        <a className="code" href="https://github.com/eugeneZolotarenko/Kazka" target="_blank" rel="noopener noreferrer"><span>code</span></a>
                                     </div>
                                 </div>
-                                     {typeof window !== "undefined" && (<AwesomeSlider className="slider" cssModule={AwsSliderStyles}>
-                                       <div data-src={kazkaScreen1}/>
-                                       <div data-src={kazkaScreen2}/>
-                                       <div data-src={kazkaScreen3}/>
-                                       <div data-src={kazkaScreen4}/>
-                                       <div data-src={kazkaScreen5}/>
-                                    </AwesomeSlider>
-                                    )}
                                 </div>
                                 <p className="about">This site was created for kindergarten / primary school in Ukraine. I tried to make the design interesting and unique, and I have added some features with css animations.<br/><br/>
                                 I appreciate this project for the experience it gave me. I learned a lot of new things in css, html, jquery, Wordpress/php. This site has 5 different templates for categories of pages. Each template has a unique design and background photo.<br/><br/>
@@ -188,14 +149,8 @@ export default class Projects extends Component {
                                        <a className="code" href="https://github.com/eugeneZolotarenko/portfolio" target="_blank" rel="noopener noreferrer"><span>code</span></a>
                                     </div>
                                 </div>
-                                      {typeof window !== "undefined" && (<AwesomeSlider className="slider" cssModule={AwsSliderStyles}>
-                                       <div data-src={portfolioScreen1}/>
-                                       <div data-src={portfolioScreen2}/>
-                                       <div data-src={portfolioScreen3}/>
-                                    </AwesomeSlider>
-                                    )}
                                 </div>
-                                <p className="about">This Portfolio was created to be unique and interesting. Hopefully it will pleasantly surprise visitors. It is powered by Gatsby.js, that's why this web site follow the latest web standards, and is optimized to be highly performant.<br/><br/>So, we can call this site, as a Progressive Web App and it makes this already compact landing page even faster. This site uses gatsby-image to efficiently lazy load images to speed initial page load. It also gives us way better performance along with a smoother user experience.</p>
+                                <p className="about">This Portfolio was created to be unique and interesting. Hopefully it will pleasantly surprise visitors.<br/><br/>This web site is powered by Gatsby.js. It follows the latest web standards, and it is optimized for maximum performance. Using Progressive Web App I have been able to make this already compact landing page even faster.<br/><br/>This site uses gatsby-image to efficiently lazy load images to speed up initial page load. It also gives us much better performance along with a smoother user experience.</p>
                                 <h4>To create this project I used: </h4>
                                 <h5>click on logo to read more...</h5>
                                 <SkillsStyle>

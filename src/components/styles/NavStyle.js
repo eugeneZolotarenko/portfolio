@@ -43,7 +43,7 @@ const Navigation = styled.nav`
             &:hover{
                 color: ${props => props.theme.red} !important;
             }
-            @media screen and (max-width: 950px){
+            @media screen and (max-width: 1400px){
               font-size: 2rem;
               padding: 0 20px;
             }

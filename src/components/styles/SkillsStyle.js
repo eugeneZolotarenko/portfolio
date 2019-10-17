@@ -17,15 +17,15 @@ const SkillsStyle = styled.section`
     width: 50%;
     margin: 0 auto 15px auto;
     text-align: center;
-        @media screen and (max-width: 800px){
-           font-size: 4rem;
+        @media screen and (max-width: 1500px){
+           font-size: 3.5rem;
            width: 100%;
         }
     }
     h5{
         font-size: 3rem;
         font-weight: 400;
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 1500px){
            font-size: 2.5rem;
            width: 100%;
         }
@@ -43,26 +43,41 @@ const SkillsStyle = styled.section`
           width: fit-content;
           @media screen and (max-width: 800px){
                width: 100%;
-               padding: 0;
+               padding: 5% 0 0 0;
           }
           p{
             font-size: 4rem;
             margin-right: 20px;
             color: ${props => props.theme.red};
+            @media screen and (max-width: 1500px){
+               font-size: 3rem;
+               margin: 5px 5px 5px 0;
+            }
             @media screen and (max-width: 800px){
                font-size: 2.2rem;
                margin: 5px 5px 5px 0;
             }
            }
-           img{
+           a{
+               display: flex;
+               position: relative;
+               width: fit-content;
+               justify-content: center;
+               align-items: center;
+            img{
                margin-right: 10px;
-               @media screen and (max-width: 800px){
+               width: 90%;
+               @media screen and (max-width: 1400px){
                    margin-right: 0;
-                   transform: scale(0.7)
+                   width: 70%;
+                   height: auto;
+                   /* transform: scale(0.7) */
                }
                @media screen and (max-width: 500px){
-                   transform: scale(0.6)
+                    width: 60%;
+                   /* transform: scale(0.6) */
                }
+           }
            }
         }
     }
