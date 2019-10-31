@@ -9,7 +9,7 @@ import Contact from "../components/sections/Contact";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import GroupOfTriangles from '../components/GroupOfTriangles'
-import { Element, animateScroll as scroll } from "react-scroll";
+import { Element } from "react-scroll";
 
 const theme = {
   blue: "#05324F",

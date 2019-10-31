@@ -23,11 +23,11 @@ const IntroStyle = styled.section`
     display: flex;
     align-items: center;
     h1{
-    font-weight: 600;
-    font-size: 7rem;
-    width: 50%;
-    margin-left: 8%;
-    margin-top: 5%;
+      font-weight: 600;
+      font-size: 7rem;
+      width: 50%;
+      margin-left: 8%;
+      margin-top: 5%;
    }
   .gatsby-image-wrapper{
     height: 43%;
@@ -47,6 +47,18 @@ const IntroStyle = styled.section`
     .mobile{
       display: none;
     }
+   }
+   @media screen and (min-width: 3000px), (min-height: 2000px){
+     .GuyName{
+       margin-top: 200px;
+       h1{
+        font-size: 9rem;
+       }
+     }
+     .IntroWords{
+        font-size: 4.5rem;
+        padding-top: 10%;
+      }
    }
    @media screen and (max-width: 1450px){
     background-image: url(${MainSpotL});

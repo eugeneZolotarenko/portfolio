@@ -107,10 +107,11 @@ const ContactStyle = styled.section`
         text-align: center;
     }
     .social{
-        margin-top: 5%;
+        margin: 5% auto 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        max-width: 2000px;
         a{
             transition: 0.3s;
             &:hover{

@@ -21,6 +21,7 @@ const ProjectsStyle = styled.section`
   display: flex;
   flex-direction: column;
   height: fit-content;
+  align-items: center;
   .blue-wave {
       background-image: url(${BlueWave});
       background-repeat: repeat-x;
@@ -42,33 +43,38 @@ const ProjectsStyle = styled.section`
         grid-gap: 10em 20em;
         margin-top: 5%;
         z-index: 200;
+        width: 100%;
+        max-width: 2000px;
         button{
-        height: 35vh;
-        min-height: 300px;
-        border: none;
-        border-radius: 10px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-x: center;
-        transition: 0.3s;
-        outline: none;
-        cursor: pointer;
-        &:hover{
+            height: 25vh;
+            min-height: 300px;
+            border: none;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            transition: 0.3s;
+            outline: none;
+            cursor: pointer;
+            &:hover{
             box-shadow: 0px 0px 15px 0px rgba(255,255,255,0.8);
-        }
-        &:focus{
+            }
+            &:focus{
             box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
-        }
+            }
+            @media screen and (max-width: 800px){
+                height: 20vh;
+            }
         }
         .kazka-preview{
             background-image: url(${KazkaPreview});
             color: white;
-            @media screen and (max-width: 800px){
-                img{
-                width: 90%;
-                height: 90%;
+            /* @media screen and (max-width: 1400px){
+            } */
+            img{
+                    width: 70%;
+                    height: 70%;
                 }
-            }
         }
         .storeWheels-preview{
             background-image: url(${StoreWheelsPreview});
