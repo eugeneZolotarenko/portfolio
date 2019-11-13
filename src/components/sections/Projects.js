@@ -87,7 +87,7 @@ export default class Projects extends Component {
                                     </div>
                                 </div>
                                 </div>
-                                <p className="about">This project introduced me to the world of web technologies with fancy interfaces and custom server side logics.<br/><br/>It is full stack online wheels store created with real credit checkout. Users can search, sell, add to cart and checkout their favourite items.<br/><br/>The application has five main models — Users, Items, Orders, CartItems, and OrderItems — all of which are relational.<br/><br/>The app also includes many server side bits including JWT authentication, permissions, sending email, uploading images, and charging credit cards.</p>
+                                <p className="about">This was my initial project in the world of web technologies. This project combined the use of fancy interfaces with custom server side logic.<br/><br/>This is a full-stack online wheels store, created with a real credit card checkout system. Users can search, add to cart, and complete the checkout process for their favourite items.<br/><br/>The web application has five main models — Users, Items, Orders, Cart Items, and Order Items — all of which are relational.<br/><br/>The app also includes many server side elements, including JWT authentication, permissions, sending email, uploading images, and charging credit cards.</p>
                                 <h4>To create this project I used: </h4>
                                 <h5>click on logo to read more...</h5>
                                 <SkillsStyle>
@@ -120,9 +120,9 @@ export default class Projects extends Component {
                                     </div>
                                 </div>
                                 </div>
-                                <p className="about">This site was created for kindergarten / primary school in Ukraine. I tried to make the design interesting and unique, and I have added some features with css animations.<br/><br/>
-                                I appreciate this project for the experience it gave me. I learned a lot of new things in css, html, jquery, Wordpress/php. This site has 5 different templates for categories of pages. Each template has a unique design and background photo.<br/><br/>
-                                A lot of things I could make over in this project, if I created it now, but I had to make it so, to be able to make things better in the future.</p>
+                                <p className="about">This site was created for a kindergarten / primary school in Ukraine. I tried to make the design interesting and unique, and I have added some features with css animations.<br/><br/>
+                                I am grateful for the experience to work on this project. I learned a lot of new things about css, html, jquery, Wordpress/php. This site has 5 different templates for categories of pages. Each template has a unique design and background photo.<br/><br/>
+                                If I had to do this project over, there would be many changes. My skill levels have improved greatly since completing this project. I see it as a stepping stone in my journey as a professional web developer. </p>
                                 <h4>To create this project I used: </h4>
                                 <h5>click on logo to read more...</h5>
                                 <SkillsStyle>
@@ -150,7 +150,7 @@ export default class Projects extends Component {
                                     </div>
                                 </div>
                                 </div>
-                                <p className="about">This Portfolio was created to be unique and interesting. Hopefully it will pleasantly surprise visitors.<br/><br/>This web site is powered by Gatsby.js. It follows the latest web standards, and it is optimized for maximum performance. Using Progressive Web App I have been able to make this already compact landing page even faster.<br/><br/>This site uses gatsby-image to efficiently lazy load images to speed up initial page load. It also gives us much better performance along with a smoother user experience.</p>
+                                <p className="about">This Portfolio was created to be unique and interesting. Hopefully it will be a pleasant surprise for my viewers.<br/><br/>This web site is powered by Gatsby.js. It follows the latest web standards, and it is optimized for maximum performance. Using Progressive Web App, I have been able to make this already compact landing page even faster.<br/><br/>This site uses gatsby-image to efficiently lazy load images, and speed up the page loading time. It also provides much better performance, along with a smoother user experience.</p>
                                 <h4>To create this project I used: </h4>
                                 <h5>click on logo to read more...</h5>
                                 <SkillsStyle>
